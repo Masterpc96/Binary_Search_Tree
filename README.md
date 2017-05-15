@@ -13,6 +13,6 @@ You can:
 8. Get predecessor
 9. Get successor
 10. Clear view
-11. Get Tree Traversals (inOrder, postOrder, preOrder)
+11. Get tree traversals (inOrder, postOrder, preOrder)
 <br><br>
 If you want to use GUI you have to add external libarary to the project.
