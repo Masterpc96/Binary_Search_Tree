@@ -143,7 +143,6 @@ public class TreeViewer extends JFrame implements ActionListener {
         rand = new Random();
     }
 
-    /*********************************************/
 
     public Object drawTree(Node<Integer> root, int depth, int index) {
         if (root == null) {
@@ -177,7 +176,6 @@ public class TreeViewer extends JFrame implements ActionListener {
 
     }
 
-    /*********************************************/
 
     public void update(Node<Integer> root) {
 
@@ -194,7 +192,6 @@ public class TreeViewer extends JFrame implements ActionListener {
         }
     }
 
-    /*********************************************/
 
     @Override
     public void actionPerformed(ActionEvent e) {
