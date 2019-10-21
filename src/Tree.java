@@ -9,7 +9,6 @@ public class Tree<T> {
         root = null;
     }
 
-    /*********************************************/
     public boolean addKey(T key) {
         if (exist(key)) return false;
         else if (root == null) {
@@ -37,7 +36,6 @@ public class Tree<T> {
         }
     }
 
-    /*********************************************/
 
     public T min(Node<T> node) {
         if (node == null) {
@@ -48,7 +46,6 @@ public class Tree<T> {
         return node.key;
     }
 
-    /*********************************************/
 
     public T max(Node<T> node) {
         if (node == null) {
@@ -59,7 +56,6 @@ public class Tree<T> {
         return node.key;
     }
 
-    /*********************************************/
 
     public Node<T> search(T key) {
         Node<T> actual = root;
@@ -70,7 +66,6 @@ public class Tree<T> {
         return actual;
     }
 
-    /*********************************************/
 
     private boolean exist(T key) {
         Node<T> actual = root;
@@ -81,7 +76,6 @@ public class Tree<T> {
         return true;
     }
 
-    /*********************************************/
 
     public Node<T> successor(T key) throws MyException {
         Node<T> node = this.search(key);
@@ -99,7 +93,6 @@ public class Tree<T> {
             throw new MyException("Not Found Successor");
     }
 
-    /*********************************************/
 
     public Node<T> predecessor(T key) throws MyException {
         Node<T> node = this.search(key);
@@ -118,7 +111,6 @@ public class Tree<T> {
             throw new MyException("Not Found Predecessor");
     }
 
-    /*********************************************/
 
     public void deleteKey(T key) {
         root = deleteRec(root, key);
@@ -147,7 +139,6 @@ public class Tree<T> {
         return root;
     }
 
-    /*********************************************/
 
     public String inOrder(Node<T> node) {
         if (node == null) return "";
@@ -155,7 +146,6 @@ public class Tree<T> {
         return inOrder(node.left) + node.key.toString() + " " + inOrder(node.right);
     }
 
-    /*********************************************/
 
     public String preOrder(Node<T> node) {
         if (node == null) return "";
@@ -163,15 +153,12 @@ public class Tree<T> {
         return node.key.toString() + " " + preOrder(node.left) + preOrder(node.right);
     }
 
-    /*********************************************/
 
     public String postOrder(Node<T> node) {
         if (node == null) return "";
 
         return postOrder(node.left) + postOrder(node.right) + node.key.toString() + " ";
     }
-
-    /*********************************************/
 
 
     public int getHeight(Node<T> node) {
@@ -180,7 +167,6 @@ public class Tree<T> {
         return node.height;
     }
 
-    /*********************************************/
 
     public int getOverload(Node<T> node) {
         int delta = Math.abs(getHeight(node.left) - getHeight(node.right));
@@ -188,7 +174,6 @@ public class Tree<T> {
         return delta;
     }
 
-    /*********************************************/
 
     public int nodeCounts(Node<T> node) {
         if (node == null) return 0;
@@ -196,8 +181,6 @@ public class Tree<T> {
         return node.nodes;
     }
 
-
-    /*********************************************/
 
     public int leavesCount(Node<T> node) {
         if (node == null) return 0;
@@ -212,7 +195,6 @@ public class Tree<T> {
         return node.leaves;
     }
 
-    /*********************************************/
 
     public Node<T> getRoot() {
         return root;
